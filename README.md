@@ -1,4 +1,4 @@
-# PROYECTO INTEGRADOR TSCDIA - PRYECTO ALFA -
+# PROYECTO INTEGRADOR TSCDIA - PROYECTO ALFA -
 
 Esta App procesará y almacenará info climática que obtendrá de diferentes medios tales como APIs y Scrappings
 
