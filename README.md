@@ -9,7 +9,7 @@ This App will process and store climatic information obtained by diferent source
 
 >[Juan Diego Coianiz](https://github.com/diegoCoianiz). Gmail: diego.c.coianiz@gmail.com
 
->[Angel Ancillotti](https://github.com/). Gmail:
+>[Angel Ancillotti](https://github.com/AngelAncillotti1). Gmail:ancillottiangel@gmail.com
 
 >[Ezequiel Cortez](https://github.com/). Gmail:
 
