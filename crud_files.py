@@ -1,10 +1,6 @@
-    ##NOTA
-#aprender a realizar un crud de carpetas y archivos va a ser importante cuando queramos manipular la data del
-#scrapping de forma correcta y guardarla en DB, o exceles, o lo que sea que queramos.
-
 import os
-ruta = os.getcwd() #determinamos nuestra ubicacion en disco
-print("la ruta se encuentra en ", ruta)
+ruta = os.getcwd()
+#print("la ruta se encuentra en ", ruta)
 
 iteration = False
 print("desea crear una nueva carpeta?")
