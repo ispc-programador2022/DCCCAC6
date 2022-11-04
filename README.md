@@ -19,4 +19,4 @@ This App will process and store climatic information obtained by diferent source
 
 >[Juan Cruz](https://github.com/). Gmail:
 
-Tecnologías: Python para servidor, MySQL para BD
+Tecnologías: Python para servidor, MySQL para BD,Selenium para operar sobre Javascript y Beaituful Soup para parsear info
