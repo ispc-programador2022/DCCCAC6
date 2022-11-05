@@ -17,6 +17,6 @@ This App will process and store climatic information obtained by diferent source
 
 >[Mariano Delfino](https://github.com/). Gmail: marianod2003@gmail.com
 
->[Juan Cruz](https://github.com/). Gmail:
+>[Juan Cortez Zamar](https://github.com/). Gmail:
 
 Tecnologías: Python para servidor, MySQL para BD,Selenium para operar sobre Javascript y Beaituful Soup para parsear info
