@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.common.keys import Keys
 import os
-from datetime import date
+#from datetime import date
 from datetime import datetime
 clear = lambda: os.system('cls')
 
@@ -95,15 +95,97 @@ def get_divs( return_, link, typeOfDiv1, attrKey1, attrkValue1, typeOfDiv2 = 0, 
             return soup.find(typeOfDiv1, attrs = {attrKey1 : attrkValue1})
 #
 
-def climate_object_creator(clima_list, area):
+# # # def climate_object_creator(clima_list, area):
    
+# # #     # retorna un objeto con todas las propiedades recuperadas de la web listo para ser procesado en pandas
+# # #     new_object = {}
+# # #     new_object["id"] = datetime.now().strftime("%d%m%Y%H%M%S")+area
+# # #     new_object["fecha"] = datetime.now().strftime("%d/%h/%Y")
+# # #     new_object["ciudad"] = area
+# # #     max = 0
+# # #     min = 0
+# # #     max_average = 0
+# # #     min_average = 0
+# # #     no_max_data = 0
+# # #     no_min_data = 0
+# # #     no_val_data = 0
+# # #     min_clima_day = ""
+# # #     max_clima_day = ""
+
+# # #     for i in range(len(clima_list)):
+# # #         counter = False
+# # #         value = clima_list[i][1].split()
+
+# # #         for index in range(len(value)-2):
+# # #             if value[index] == "Temp.":
+# # #                 value.pop(index)
+# # #         max_day = clima_list[i][0] + " : " + value[1][0] + value[1][1] + "°"
+# # #         min_day = clima_list[i][0] + " : " + value[4][0] + value[4][1] + "°"
+
+# # #         try:
+# # #             if value[1][0] != "-":
+# # #                 if value[1][1] != "°":
+# # #                     max_value = int(value[1][0] + value[1][1])
+# # #                 else: 
+# # #                     max_value = int(value[1][0])
+# # #             max_average += max_value
+# # #         except:
+# # #             max_value = "sin datos"
+# # #             no_max_data += 1
+# # #             counter = True
+
+# # #         try:
+# # #             if value[4][0] != "-":
+# # #                 if value[4][1] != "°":
+# # #                     min_value = int(value[4][0] + value[4][1])
+# # #             else:
+# # #                 min_value = int(value[4][0])
+# # #             min_average += min_value
+# # #         except:
+# # #             min_value = "sin datos"
+# # #             no_min_data += 1
+# # #             counter = True
+
+# # #         if counter == True:
+# # #             no_val_data += 1
+
+# # #         if i <= no_val_data and counter == False:
+# # #             max = max_value
+# # #             max_clima_day = max_day
+# # #             min = min_value
+# # #             min_clima_day = min_day
+# # #         else:
+# # #             if max < max_value:
+# # #                 max = max_value
+# # #                 max_clima_day = max_day
+# # #             if min > max_value:
+# # #                 min = max_value
+# # #                 min_clima_day = min_day
+# # #             no_val_data = 0
+
+# # #         new_object[clima_list[i][0].split()[0]] = value
+    
+# # #     new_object["maxima_semanal"] = max_clima_day
+# # #     new_object["minima_semanal"] = min_clima_day
+# # #     new_object["promedio_maximo"] = max_average//len(clima_list)-no_max_data
+# # #     new_object["promedio_minimo"] = min_average//len(clima_list)-no_min_data
+# # #     new_object["temperatura_media"] = (new_object["promedio_maximo"] + new_object["promedio_minimo"]) / 2
+
+# # #     return new_object
+#
+
+def climate_object_creator(clima_list, area):
     # retorna un objeto con todas las propiedades recuperadas de la web listo para ser procesado en pandas
+
+    #region
     new_object = {}
     new_object["id"] = datetime.now().strftime("%d%m%Y%H%M%S")+area
     new_object["fecha"] = datetime.now().strftime("%d/%h/%Y")
-    new_object["ciudad"] = area
+    new_object["ciudad"] = area 
     max = 0
     min = 0
+    max_day = "sin datos"
+    min_day = "sin datos"
     max_average = 0
     min_average = 0
     no_max_data = 0
@@ -111,66 +193,136 @@ def climate_object_creator(clima_list, area):
     no_val_data = 0
     min_clima_day = ""
     max_clima_day = ""
+    first = True
+    #endregion
 
-    for i in range(len(clima_list)):
-        counter = False
-        value = clima_list[i][1].split()
-
-        for index in range(len(value)-2):
-            if value[index] == "Temp.":
-                value.pop(index)
-        max_day = clima_list[i][0] + " : " + value[1][0] + value[1][1] + "°"
-        min_day = clima_list[i][0] + " : " + value[4][0] + value[4][1] + "°"
-
-        try:
-            if value[1][0] != "-":
-                if value[1][1] != "°":
-                    max_value = int(value[1][0] + value[1][1])
-                else: 
-                    max_value = int(value[1][0])
-            max_average += max_value
-        except:
-            max_value = "sin datos"
-            no_max_data += 1
+    try:
+        for i in range(len(clima_list)):
             counter = True
+            counter_min = True 
+            counter_max = True
+            min_value = 0
+            max_value = 0
+            value = clima_list[i][1].split()
+            remove_index = []
+            for index in range(len(value)):
+                if value[index] == "Temp.":
+                    remove_index.append(index)
+                if value[index] == "-°":
+                    if index < 3:
+                        no_max_data += 1
+                        value[index-1] = "SIN DATOS"
+                        counter_max = False
+                    else:
+                        no_min_data += 1
+                        value[index-1] = "SIN DATOS"
+                        counter_min = False
+                    remove_index.append(index)
+                    
+            for index in reversed(range(len(remove_index))):
+                value.pop(remove_index[index])
 
-        try:
-            if value[4][0] != "-":
-                if value[4][1] != "°":
-                    min_value = int(value[4][0] + value[4][1])
-            else:
-                min_value = int(value[4][0])
-            min_average += min_value
-        except:
-            min_value = "sin datos"
-            no_min_data += 1
-            counter = True
+            if counter_max == False or counter_min == False:
+                no_val_data += 1
+                counter = False
+                        
+            if counter_max:
+                max_day = clima_list[i][0] + " : " + value[1][0] + value[1][1] + "°"
+            if counter_min:
+                try:
+                    if value[4][1] != "°":
+                        min_day = clima_list[i][0] + " : " + value[4][0] + value[4][1] + "°"
+                    else:
+                        min_day = clima_list[i][0] + " : " + value[4][0] + "°"
+                except:
+                    if value[3][1] != "°":
+                        min_day = clima_list[i][0] + " : " + value[3][0] + value[3][1] + "°"
+                    else:
+                        min_day = clima_list[i][0] + " : " + value[3][0] + "°"
 
-        if counter == True:
-            no_val_data += 1
+            if counter_max:
+                try:
+                    if value[1][0] != "-":
+                        if value[1][1] != "°":
+                            max_value = int(value[1][0] + value[1][1])
+                        else: 
+                            max_value = int(value[1][0])
+                    max_average += max_value
+                except:
+                    max_value = "SIN DATOS"
+                    counter = False
+            
+            if counter_min:
+                try:
+                    if value[4][0] != "-":
+                        if value[4][1] != "°":
+                            min_value = int(value[4][0] + value[4][1])
+                        else:
+                            min_value = int(value[4][0])
+                    min_average += min_value
+                except:
+                    try:
+                        if value[3][0] != "-":
+                            if value[3][1] != "°":
+                                min_value = int(value[3][0] + value[3][1])
+                            else:
+                                min_value = int(value[3][0])
+                        min_average += min_value
+                    except:
+                        min_value = "SIN DATOS"
+                        counter = False
 
-        if i <= no_val_data and counter == False:
-            max = max_value
-            max_clima_day = max_day
-            min = min_value
-            min_clima_day = min_day
+            if first == True:
+                if i <= no_val_data and counter_max == True or counter_min == True:
+                    max = max_value
+                    max_clima_day = max_day
+                    min = min_value
+                    min_clima_day = min_day
+                    first = False
+            elif counter == True:
+                if max < max_value:
+                    max = max_value
+                    max_clima_day = max_day
+                if min > max_value:
+                    min = max_value
+                    min_clima_day = min_day
+
+            if value == ['Máx', '|', 'Mín']:
+                value = "no hay datos"
+            
+            new_object[clima_list[i][0].split()[0]] = value
+    except Exception as e:
+        print(e)    
+    #region
+
+    if no_val_data == 0:
+        new_object["maxima_semanal"] = max_clima_day
+        new_object["minima_semanal"] = min_clima_day
+        new_object["promedio_maximo"] = max_average//(len(clima_list)-no_max_data)
+        new_object["promedio_minimo"] = min_average//(len(clima_list)-no_min_data)
+        new_object["temperatura_media"] = (new_object["promedio_maximo"] + new_object["promedio_minimo"]) / 2
+        new_object["estatus"] = "PERFECTO"
+    elif no_val_data < 7:
+        new_object["maxima_semanal"] = max_clima_day
+        new_object["minima_semanal"] = min_clima_day
+        new_object["promedio_maximo"] = max_average//(len(clima_list)-no_max_data)
+        new_object["promedio_minimo"] = min_average//(len(clima_list)-no_min_data)
+        new_object["temperatura_media"] = (new_object["promedio_maximo"] + new_object["promedio_minimo"]) / 2
+        new_object["estatus"] = f"ERROR: FALTAN {no_max_data + no_min_data} DATOS DE LA SEMANA"
+    else:
+        if no_min_data < 7:
+            print("activa crear minimos")
+            new_object["minima_semanal"] = min_clima_day
+            new_object["promedio_minimo"] = min_average//(len(clima_list)-no_min_data)
+            new_object["estatus"] = "ERROR: NINGÚN DÍA DE LA SEMANA ESTA COMPLETO"
+        elif no_max_data < 7:
+            print("activa crear maximos")
+            new_object["maxima_semanal"] = max_clima_day
+            new_object["promedio_maximo"] = max_average//(len(clima_list)-no_max_data)
+            new_object["estatus"] = "ERROR: NINGÚN DÍA DE LA SEMANA ESTA COMPLETO"
         else:
-            if max < max_value:
-                max = max_value
-                max_clima_day = max_day
-            if min > max_value:
-                min = max_value
-                min_clima_day = min_day
-            no_val_data = 0
-
-        new_object[clima_list[i][0].split()[0]] = value
-    
-    new_object["maxima_semanal"] = max_clima_day
-    new_object["minima_semanal"] = min_clima_day
-    new_object["promedio_maximo"] = max_average//len(clima_list)-no_max_data
-    new_object["promedio_minimo"] = min_average//len(clima_list)-no_min_data
-    new_object["temperatura_media"] = (new_object["promedio_maximo"] + new_object["promedio_minimo"]) / 2
-
+            new_object["estatus"] = "ERROR: NINGÚN DÍA DE LA SEMANA ESTA COMPLETO"
+    #endregion
     return new_object
 #
 
@@ -237,4 +389,6 @@ def to_dataFrame(data, new_dir, name):
 #region scrap_init
 data = scrape_cities(area_list)
 fecha = datetime.now().strftime("%d%h%Y_%H%M%S")
-to_dataFrame(data, "dataFrames", f"dataFrame_{fecha}")
+to_dataFrame(data, "DF mejorados", f"dataFrame_{fecha}")
+driver.close()
+#print(get_divs("table", driver.page_source, "ul", "id", "lista_matriz", "li"))
