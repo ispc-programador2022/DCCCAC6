@@ -5,8 +5,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `DatosTiempo` DEFAULT CHARACTER SET utf8 ;
 USE `DatosTiempo` ;
 CREATE TABLE IF NOT EXISTS `DatosTiempo`.`Pronostico` (
-  `Id ciudad` INT NOT NULL,
-  `Fecha` DATE NULL,
+  `Fecha` DATE NULL NOT NULL,
   `Ciudad` VARCHAR(20) NULL,
   `LunesMin` INT NULL,
   `LunesMax` INT NULL,
@@ -21,13 +20,12 @@ CREATE TABLE IF NOT EXISTS `DatosTiempo`.`Pronostico` (
   `SabadoMax` INT NULL,
   `DomingoMin` INT NULL,
   `DomingoMax` INT NULL,
-  PRIMARY KEY (`Id ciudad`))
+  PRIMARY KEY (`IdFecha`))
 ENGINE = InnoDB
 COMMENT = '	';
 
 CREATE TABLE IF NOT EXISTS `DatosTiempo`.`DatosReales` (
-  `id ciudades` INT NOT NULL,
-  `Fecha y hora` DATETIME NULL,
+  `IDFecha` DATETIME NOT NULL,
   `Ciudad` VARCHAR(20) NULL,
   `Temperatura` DECIMAL(1) NULL,
   `Humedad` INT NULL,
@@ -35,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `DatosTiempo`.`DatosReales` (
   `viento` INT NULL,
   `visibilidad` INT NULL,
   `estado del clima` VARCHAR(25) NULL,
-  PRIMARY KEY (`id ciudades`))
+  PRIMARY KEY (`IDFecha`))
 ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
