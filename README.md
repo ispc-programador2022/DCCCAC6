@@ -13,7 +13,7 @@ This App will process and store climatic information obtained by diferent source
 
 >[Ezequiel Cortes Pedernera](https://github.com/). Gmail: eze.cortes.pedernera@gmail.com
 
->[Paula Chiaramello](https://github.com/). Gmail:
+>[Paula Chiaramello](https://github.com/). Gmail: chiaramellopaula@gmail.com
 
 >[Mariano Delfino](https://github.com/). Gmail: marianod2003@gmail.com
 
