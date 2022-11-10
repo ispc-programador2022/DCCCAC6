@@ -1,8 +1,12 @@
+![membrete ISPC](https://user-images.githubusercontent.com/107323698/201164371-dc86b2fe-f847-49d3-9cd1-b11cdae1f1d0.PNG)
+
+
+
 # PROYECTO INTEGRADOR TSCDIA - PROYECTO ALFA -
 
-Esta App procesará y almacenará info climática que obtendrá de diferentes medios tales como APIs y Scrappings
+Esta App procesará y almacenará info climática que obtendrá de diferentes medios tales como APIs y Scrappings.
 
-This App will process and store climatic information obtained by diferent sources as APIs and Scrappings
+This App will process and store climatic information obtained by diferent sources as APIs and Scrappings.
 
 
 ## Integrantes
@@ -19,4 +23,4 @@ This App will process and store climatic information obtained by diferent source
 
 >[Juan Cortez Zamar](https://github.com/). Gmail: juancorzamar@gmail.com
 
-Tecnologías: Python para servidor, MySQL para BD,Selenium para operar sobre Javascript y BeautifulSoup para parsear info
+Tecnologías: Python para servidor, MySQL para BD, Selenium para operar sobre Javascript, BeautifulSoup para parsear info, Tableau para visualizacion y analisis de datos. 
