@@ -36,6 +36,7 @@ https://app.powerbi.com/links/mvS7cxHMbV?ctid=e715177a-8963-49dc-a267-25aa1ff365
 
 Cabe destacar que para la realizacion del informe se tuvieron en cuenta distintas tecnologias que aportaron a la organizacion y el analisis de los datos. 
 Las que principalmente se destacan son Excel, la cual nos permitio mediante sus formulas organizar y calcular la temperatura minimas y maximas del periodo de dias analizado, junto con sus respectivas temperaturas medias y el promedio entre ambas. 
+
 La segunda tecnologia es Power BI, la cual nos permitio mediante su editor de datos (Power Query), clasificar las distintas columnas y seguir quitando redundancias, para luego finalmente con Power BI graficar los datos y poder realziar el analisis  de la dispersion de los datos mediante la desviacion estandart, pudiendo asi medir la volatilidad de los picos de temperatura maximas y minimas del periodo. 
 
 Para finalizar se compartio el archivo en un documento de GitHub para su presentacion y visualizacion mediante publico acceso. 
