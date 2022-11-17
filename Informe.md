@@ -23,13 +23,13 @@ para lector, por lo que dejamos copia del mismo a continuación.
 
 
 
-[Presentacion + Integrantes]   https://drive.google.com/open?id=1O2mhw9_W7Ygx2kHbtKzFT8T8AicD2mvi&usp=drive_copy
+[Presentacion + Integrantes]   https://drive.google.com/file/d/1O2mhw9_W7Ygx2kHbtKzFT8T8AicD2mvi/view?usp=share_link
 
-[Introduccion]   https://drive.google.com/open?id=1-zplWh9HyrSqHBLx8ICOuUovxDynVaaX&usp=drive_copy
+[Introduccion]   https://drive.google.com/file/d/1-zplWh9HyrSqHBLx8ICOuUovxDynVaaX/view?usp=sharing
 
-[Primer Analisis]  https://drive.google.com/open?id=1T2Ti-gK5dH1Vpbon5rTNZS0dO75gUVI4&usp=drive_copy
+[Primer Analisis]  https://drive.google.com/file/d/1T2Ti-gK5dH1Vpbon5rTNZS0dO75gUVI4/view?usp=sharing
 
-[Segundo Analisis]  https://drive.google.com/open?id=1r-GmxkBZEiLJ9v5Lo5Gq1HUnCZENbtCX&usp=drive_copy
+[Segundo Analisis]  https://drive.google.com/file/d/1r-GmxkBZEiLJ9v5Lo5Gq1HUnCZENbtCX/view?usp=sharing
 
 
 En el siguiente enlace se encuentra guardado el informe original creado con la aplicacion Power BI, donde se puede . 
