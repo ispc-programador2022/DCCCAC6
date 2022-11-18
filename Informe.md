@@ -33,7 +33,7 @@ para lector, por lo que dejamos imagenes del mismo a continuación:
 En el siguiente enlace se encuentra guardado el informe original creado con la aplicacion Power BI, donde se puede visualizar solo con la debida licencia: 
 https://app.powerbi.com/links/mvS7cxHMbV?ctid=e715177a-8963-49dc-a267-25aa1ff36521&pbi_source=linkShare
 
-Tambien adjuntamos un archivo de tipo ZIP, donde se encuentra el documento original 
+Tambien adjuntamos un archivo de tipo ZIP, donde se encuentra el documento original para su descarga. 
 [Proyecto Alfa.BI.zip](https://github.com/ispc-programador2022/DCCCAC6/files/10041669/Proyecto.Alfa.BI.zip)
 
 
