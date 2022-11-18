@@ -18,9 +18,7 @@ dejamos a continuación.
 [https://docs.google.com/spreadsheets/d/1rmFz1AhgJOQqiKkqX4Ii1KT0Wv2-g5aWrVdeyS_mUTI/edit#gid=0]
 
 El siguiente gran desafío fue la presentación del informe, ya que para poder presentar el mismo de manera virtual se necesita una licencia 
-para lector, por lo que dejamos copia del mismo a continuación. 
-
-
+para lector, por lo que dejamos imagenes del mismo a continuación: 
 
 
 [Presentacion + Integrantes]   https://drive.google.com/file/d/1O2mhw9_W7Ygx2kHbtKzFT8T8AicD2mvi/view?usp=share_link
@@ -32,8 +30,11 @@ para lector, por lo que dejamos copia del mismo a continuación.
 [Segundo Analisis]  https://drive.google.com/file/d/1r-GmxkBZEiLJ9v5Lo5Gq1HUnCZENbtCX/view?usp=sharing
 
 
-En el siguiente enlace se encuentra guardado el informe original creado con la aplicacion Power BI, donde se puede . 
+En el siguiente enlace se encuentra guardado el informe original creado con la aplicacion Power BI, donde se puede visualizar solo con la debida licencia: 
 https://app.powerbi.com/links/mvS7cxHMbV?ctid=e715177a-8963-49dc-a267-25aa1ff36521&pbi_source=linkShare
+
+Tambien adjuntamos un archivo de tipo ZIP, donde se encuentra el documento original 
+[Proyecto Alfa.BI.zip](https://github.com/ispc-programador2022/DCCCAC6/files/10041669/Proyecto.Alfa.BI.zip)
 
 
 Cabe destacar que para la realización del informe se tuvieron en cuenta distintas tecnologías que aportaron a la organización y el análisis de los datos. Las que principalmente se destacan son Excel, la cual nos permitio mediante sus fórmulas organizar y calcular la temperatura mínimas y máximas del periodo de días analizado, junto con sus respectivas temperaturas medias y el promedio entre ambas.
