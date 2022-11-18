@@ -7,6 +7,7 @@
 
 
 #RESUMEN INFORME
+
 Nuestra aplicación realiza operaciones de scraping sobre la pagina del serivicio meteorológico nacional. Dicha web, construida sobre tecnología PHP y con gran parte de la info enviada a través de APIs, presento impedimentos para trabajar enteramente sobre los modulos de Rquests y BeautifulSoup, idea principal del proyecto, puesto que era imposible acceder a las APIs para hacer las consultas y scrapear y las respuestas a posterior. En su lugar empleamos la tecnología Selenium y ChromeDriver para inicializar un navegador web que pudiera interactuar con el JS de la pagina y llegar a pasar como parametros de solicitud las ciudades foco (las 23 capitales provinciales) y luego devolver un html más completo con la información que necesitabamos de cada zona como variable parseada y lista para ser utilizada por Soups. Conseguido este objetivo, y solucionados algunos inconvenientes relacionados al tipo de informacion ofrecida por la pagina (que no presenta datos númercos del clima para todoas las fechas y a toda hora, sino que a veces carece de datos y en su lugar ofrece el caracter " -° " lo que complica el correcto funcionamiento del parseo) almacenamos la información obtenida en cada instancia de scraping en un objeto que compara Maximos, Minimos y media Semanal y luego transformamos ese objeto en un Panda DataFrame almacenado en carpetas especificas dependiendo de la necesidad 
 
 
