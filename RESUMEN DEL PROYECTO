@@ -28,6 +28,10 @@ Por cuestiones de tiempo decimos realizar dicha base de datos directamente en My
 obtenidos por parte del web scraping, quitando redundancias por ejemplo nos arrojaba el valor "fecha" como fila y columna. Para analizar y realizar el posterior informe 
 a partir de PowerBi decidimos crear un archivo Excel con la base de datos obtenida.
 
+Apartir del trabajo realizado pudimos aprender a realizar web scraping a una pagina con lenguaje Javascript obteniendo datos del clima procesados con python llevados
+a una base datos MySQL y luego reorganizados en Excel para operarlos en PowerBi. Todo este trabajo realizado se pudo llevar adelante organizadamente gracias a lo
+aprendido durante el año lectivo con el uso de Trello.
+
 Tecnologias Utilizadas
 - Selenium
 - Chrome Driver
