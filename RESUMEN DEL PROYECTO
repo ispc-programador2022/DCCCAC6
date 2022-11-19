@@ -4,15 +4,21 @@ CARRERA: TECNICATURA SUPERIOR DE CIENCIAS DE DATOS E INTELIGENCIA ARTIFICIAL
 
 PROFESORES: 
 - HECTÓR PRADO
-SILVIA PEROTTI
+- SILVIA PEROTTI
 
 INTEGRANTES DEL GRUPO DCCCAC6:
 - MARIANO DELFINO
 - JUAN DIEGO COIANIZ 
 - EZEQUIEL CORTES PEDERNERA
 - JUAN CORTEZ ZAMAR
--  ANGEL ANCILLOTTI
+- ANGEL ANCILLOTTI
 - PAULA CHIARAMELLO
 
+OBJETIVO DEL PROYECTO: 
+Analizar datos meteorologicos.
 
-
+Para cumplir con el objetivo decidimos extraer los datos de la pagina del servicio meteorologico nacional (www.smn.gob.ar), para ello utilizamos la tecnica web scraping, 
+el primer inconveniente que se nos presento fue que esta página esta construida sobre la tecnologia PHP, teniendo gran parte de la informacion enviada a través de APIs,
+por lo que no pudimos trabajar enteramente con los modulos Beautiful Soup y Request. Luego de realizar una invetigación llegamos a la tecnologia  Selenium y ChromeDriver 
+con la cual pudimos hacer el web scraping de dicha pagina, permitiendonos abrir un navegador web que interactue con el JavaScript de la página y asi tomar la información
+deseada.
