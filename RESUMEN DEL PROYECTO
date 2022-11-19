@@ -22,3 +22,16 @@ el primer inconveniente que se nos presento fue que esta página esta construida
 por lo que no pudimos trabajar enteramente con los modulos Beautiful Soup y Request. Luego de realizar una invetigación llegamos a la tecnologia  Selenium y ChromeDriver 
 con la cual pudimos hacer el web scraping de dicha pagina, permitiendonos abrir un navegador web que interactue con el JavaScript de la página y asi tomar la información
 deseada.
+
+Siguiente paso que dimos fue crear en python la conexion con MySQL, la cual dejamos como ejemplo de que se podia realizar dicha conexion y trabajar desde python en MySQL.
+Por cuestiones de tiempo decimos realizar dicha base de datos directamente en MySQL, con formato .csv. En la cual procedimos a analizar, ordenar y reorganizar los datos 
+obtenidos por parte del web scraping, quitando redundancias por ejemplo nos arrojaba el valor "fecha" como fila y columna. Para analizar y realizar el posterior informe 
+a partir de PowerBi decidimos crear un archivo Excel con la base de datos obtenida.
+
+Tecnologias Utilizadas
+- Selenium
+- Chrome Driver
+- Excel
+- PowerBi
+- Python
+- MySQL
