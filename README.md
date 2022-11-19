@@ -23,4 +23,4 @@ This App will process and store climatic information obtained by diferent source
 
 >[Juan Cortez Zamar](https://github.com/). Gmail: juancorzamar@gmail.com
 
-Tecnologías: Python para servidor, MySQL para BD, Selenium para operar sobre Javascript, BeautifulSoup para parsear info, Tableau para visualizacion y analisis de datos. 
+Tecnologías: Python para servidor, MySQL para la Base de Datos, Selenium para operar sobre Javascript, BeautifulSoup para parsear información, Power Bi para visualización y analisis de datos. 
