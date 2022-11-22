@@ -1,0 +1,41 @@
+                    PROYECTO INTEGRADOR - COHORTE 2022
+            
+CARRERA: TECNICATURA SUPERIOR DE CIENCIAS DE DATOS E INTELIGENCIA ARTIFICIAL
+
+PROFESORES: 
+- HECTÓR PRADO
+- SILVIA PEROTTI
+
+INTEGRANTES DEL GRUPO DCCCAC6:
+- MARIANO DELFINO
+- JUAN DIEGO COIANIZ 
+- EZEQUIEL CORTES PEDERNERA
+- JUAN CORTEZ ZAMAR
+- ANGEL ANCILLOTTI
+- PAULA CHIARAMELLO
+
+OBJETIVO DEL PROYECTO: 
+Analizar datos meteorologicos.
+
+Para cumplir con el objetivo decidimos extraer los datos de la pagina del servicio meteorologico nacional (www.smn.gob.ar), para ello utilizamos la tecnica web scraping, 
+el primer inconveniente que se nos presento fue que esta página esta construida sobre la tecnologia PHP, teniendo gran parte de la informacion enviada a través de APIs,
+por lo que no pudimos trabajar enteramente con los modulos Beautiful Soup y Request. Luego de realizar una invetigación llegamos a la tecnologia  Selenium y ChromeDriver 
+con la cual pudimos hacer el web scraping de dicha pagina, permitiendonos abrir un navegador web que interactue con el JavaScript de la página y asi tomar la información
+deseada.
+
+Siguiente paso que dimos fue crear en python la conexion con MySQL, la cual dejamos como ejemplo de que se podia realizar dicha conexion y trabajar desde python en MySQL.
+Por cuestiones de tiempo decimos realizar dicha base de datos directamente en MySQL, con formato .csv. En la cual procedimos a analizar, ordenar y reorganizar los datos 
+obtenidos por parte del web scraping, quitando redundancias por ejemplo nos arrojaba el valor "fecha" como fila y columna. Para analizar y realizar el posterior informe 
+a partir de PowerBi decidimos crear un archivo Excel con la base de datos obtenida.
+
+Apartir del trabajo realizado pudimos aprender a realizar web scraping a una pagina con lenguaje Javascript obteniendo datos del clima procesados con python llevados
+a una base datos MySQL y luego reorganizados en Excel para operarlos en PowerBi. Todo este trabajo realizado se pudo llevar adelante organizadamente gracias a lo
+aprendido durante el año lectivo con el uso de Trello.
+
+Tecnologias Utilizadas
+- Selenium
+- Chrome Driver
+- Excel
+- PowerBi
+- Python
+- MySQL
